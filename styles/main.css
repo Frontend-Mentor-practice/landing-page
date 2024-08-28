@@ -1,0 +1,26 @@
+:root {
+  --clr-txt-dark: #28283D;
+  --clr-txt-light: #87879D;
+  --clr-cyan: #4D96A9;
+  --clr-cyan-light: #4D96A9;
+  --clr-purple: #855FB1;
+
+  --clr-light-gray: #D1D1DF;
+}
+
+body {
+  font-family: "Red Hat Display", sans-serif;
+}
+
+
+h1,
+h2,
+h3 {
+  font-weight: bold;
+  color: var(--clr-txt-dark);
+  line-height: 110%;
+}
+
+p {
+  color: var(--clr-txt-light);
+}
