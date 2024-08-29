@@ -1,18 +1,23 @@
 :root {
   --clr-txt-dark: #28283D;
   --clr-txt-light: #87879D;
-  --clr-cyan: #4D96A9;
-  --clr-cyan-light: #4D96A9;
+  --clr-cyan: #4d96a9;
+  --clr-cyan-light: #8FE3F9;
   --clr-purple: #855FB1;
-
+  --clr-white: #FAFAFA;
   --clr-light-gray: #D1D1DF;
+  --clr-light-puple: #D9B8FF;
+  --clr-bg-primary-active: #71C0D4;
+  --clr-bg-secondary-active: #B18BDD;
 }
-
+/* page reset */
 body {
   font-family: "Red Hat Display", sans-serif;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--clr-white);
+  overflow-x: hidden;
 }
-
-
 h1,
 h2,
 h3 {
@@ -20,7 +25,186 @@ h3 {
   color: var(--clr-txt-dark);
   line-height: 110%;
 }
-
+h1 {
+  font-size: 4rem;
+  max-width: 10ch;
+}
+h2 {
+  font-size: 2.5rem;
+  max-width: 15ch;
+  font-weight: 900;
+}
 p {
   color: var(--clr-txt-light);
+  max-width: 35ch;
+  line-height: 150%;
+  font-weight: 500;
+  font-size: 1.125rem;
+}
+button {
+  padding: 1rem 2.5rem;
+  border-radius: 1.8125rem;
+  font-weight: bold;
+  color: var(--clr-white);
+  cursor: pointer;
+}
+
+/* helper classes */
+.clr-white {
+  color: var(--clr-white);
+}
+.clr-cyan {
+  color: var(--clr-cyan);
+}
+.clr-light-cyan {
+  color: var(--clr-cyan-light);
+}
+.clr-bg-cyan {
+  background-color: var(--clr-cyan);
+}
+.clr-bg-purple {
+  background-color: var(--clr-purple);
+}
+.clr-light-purple {
+  color: var(--clr-light-puple);
+}
+.ls-4 {
+  letter-spacing: 4px;
+}
+.fs-16 {
+  font-size: 16px;
+}
+.fs-18 {
+  font-size: 18px;
+}
+.char-width-45 {
+  max-width: 45ch;
+}
+
+/* navbar styles */
+nav {
+  padding-block-start: 5rem;
+}
+
+/* hero styles */
+.hero {
+  --fluid-min: 2.5rem;
+  --fluid-target: 3vw;
+  --fluid-max: 4rem;
+  padding-block: 4rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  grid-gap: 1rem;;
+}
+.hero hgroup {
+  padding: 1.4375rem 1rem;
+}
+img.hero-right {
+  align-self: end;
+  justify-self: end;
+  transform: translateX(20px);
+}
+img.hero-left {
+  transform: translateX(-20px);
+}
+
+/* photo gallery styles */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr;
+  gap: 2rem;
+}
+.gallery > * {
+  border-radius: 8px;
+}
+main {
+  padding-block: 3.5rem;
+}
+main .main-wrapper {
+  padding-top: 5rem;
+}
+.cta-primary:hover {
+  background-color: var(--clr-bg-primary-active);
+}
+.cta-secondary:hover {
+  background-color: var(--clr-bg-secondary-active);
+}
+
+/* footer styles */
+footer {
+  position: relative;
+  margin-top: auto;
+  padding-block: 10rem;
+  background-image: url('/assets/desktop/image-footer.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-image: fill 1 linear-gradient(rgba(77, 151, 169, 0.745), rgba(77, 151, 169, 0.745));
+}
+.footer-container {
+  padding-block-start: calc(80px + 2rem);
+}
+.landmark {
+  color: var(--clr-txt-light);
+  font-weight: bold;
+  padding: 1rem 19px;
+  border: 1px solid var(--clr-light-gray);
+  border-radius: 50%;
+  position: relative;
+  background-color: var(--clr-white);
+}
+.landmark::after {
+  content: '';
+  position: absolute;
+  height: 80px;
+  border: 1px solid var(--clr-light-gray);
+  transform: translate(-400%, -120%);
+}
+.landmark.last {
+  position: absolute;
+  top: 0;
+  transform: translateY(-50%);
+}
+
+/* tablet */
+@media screen and (max-width: 768px) {
+  .hero {
+    grid-template-columns: 1fr;
+    grid-template-rows: fit-content 1fr;
+  }
+  .hero-right {
+    display: none;
+  }
+  footer {
+    padding-block: 5rem;
+    background-image: url('/assets/tablet/image-footer.jpg');
+  }
+  .footer-content {
+    text-align: center;
+    flex-direction: column;
+  }
+  .footer-content > * {
+    max-width: unset;
+  }
+  .gallery {
+    gap: 1rem;
+  }
+}
+
+/* mobile */
+@media screen and (max-width: 395px) {
+  .gallery {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+  .cta {
+    flex-direction: column;
+    align-items: center;
+  }
+  footer {
+    padding-block: 1.875rem;
+    background-image: url('/assets/mobile/image-footer.jpg');
+  }
 }

@@ -14,38 +14,56 @@
 </head>
 <body>
 
-  <header>
-    <nav>
-      <img src="./assets/logo.svg" alt="">
-    </nav>
+  <nav class="flex-row justify-center">
+    <img src="./assets/logo.svg" alt="meet">
+  </nav>
 
-    <hgroup>
-      <h1>Group Chat for Everyone</h1>
-      <p>Meet makes it easy to connect with others face-to-face virtually and collaborate across any device.</p>
+  <header class="[ hero ]">
+    <picture>
+      <source media="(max-width: 768px)" srcset="./assets/tablet/image-hero.png">
+      <img class="hero-left" src="./assets/desktop/image-hero-left.png" alt="">
+    </picture>
+    <hgroup class="flex-column items-center justify-center gap-32">
+      <h1 class="center fluid-type">Group Chat for Everyone</h1>
+      <p class="center">Meet makes it easy to connect with others face-to-face virtually and collaborate across any device.</p>
+      <div class="flex-row gap-16 items-center [ cta ]">
+        <button class="clr-bg-cyan no-wrap [ cta-primary ]">Download <span class='clr-light-cyan'>v1.3</span></button>
+        <button class="clr-bg-purple no-wrap [ cta-secondary ]">What is it?</button>
+      </div>
     </hgroup>
-
-    <button>Download v1.3</button>
-    <button>What is it?</button>
-
+    <img class="hero-right" src="./assets/desktop/image-hero-right.png" alt="">
   </header>
-
   
   <main>
-    <span>01</span>
-    <p><small>Built for modern use</small></p>
-
-    <h2>Smarter meetings, all in one place</h2>
-
-    <p>Send messages, share files, show your screen, and record your meetings — all in one 
-    workspace. Control who can join with invite-only team access, data encryption, and data export.</p>
+    <div class="wrapper full flex-column gap-64 items-center [ main-wrapper ]">
+      <span class="landmark">01</span>
+      <div class="[ gallery ]">
+        <img src="./assets/desktop/image-woman-in-videocall.jpg" alt="">
+        <img src="./assets/desktop/image-women-videochatting.jpg" alt="">
+        <img src="./assets/desktop/image-men-in-meeting.jpg" alt="">
+        <img src="./assets/desktop/image-man-texting.jpg" alt="">
+      </div>
+      <hgroup class="flex-column justify-center items-center gap-32">
+        <div class="flex-column gap-16 items-center">
+          <p class="uppercase ls-4 clr-cyan fw-900"><small class="fs-16">Built for modern use</small></p>
+          <h2 class="center">Smarter meetings, all in one place</h2>
+        </div>
+        <p class="center char-width-45">Send messages, share files, show your screen, and record your meetings — all in one 
+        workspace. Control who can join with invite-only team access, data encryption, and data export.</p>
+      </hgroup>
+    </div>
   </main>
+  
+  <div class="[ footer-container ]">
+    <footer class="flex-column items-center">
+      <span class="landmark last">02</span>
+      <section class="wrapper flex-row items-center justify-space-between gap-24 wrap full [ footer-content ]">
+        <h2 class="clr-white">Experience more together</h2>
+        <p class="clr-white">Stay connected with reliable HD meetings and unlimited one-on-one and group video sessions.</p>
+        <button class="clr-bg-purple no-wrap [ cta-secondary ]">Download <span class="clr-light-purple">v1.3</span></button>
+      </section>
+    </footer>
+  </div>
 
-  <footer>
-    02
-    <h2>Experience more together</h2>
-    <p>Stay connected with reliable HD meetings and unlimited one-on-one and group video sessions.</p>
-
-    <button>Download v1.3</button>
-  </footer>
 </body>
 </html>

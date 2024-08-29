@@ -6,6 +6,12 @@
   );
 }
 
+.wrapper {
+  max-width: 88rem;
+  margin-inline: auto;
+  padding-inline: 2rem;
+}
+
 /* FLEXBOX */
 .flex-row {
   display: flex;
@@ -77,6 +83,10 @@
   gap: 2rem;
 }
 
+.gap-64 {
+  gap: 4rem;
+}
+
 .p-none {
   padding: 0;
 }
@@ -94,8 +104,16 @@
   font-weight: 500;
 }
 
+.fw-600 {
+  font-weight: 600;
+}
+
 .fw-800 {
   font-weight: 800;
+}
+
+.fw-900 {
+  font-weight: 900;
 }
 
 .normal {
@@ -132,4 +150,12 @@
 
 .radius-8 {
   border-radius: 8px;
+}
+
+.no-wrap {
+  white-space: nowrap
+}
+
+.full {
+  inline-size: 100%;
 }
