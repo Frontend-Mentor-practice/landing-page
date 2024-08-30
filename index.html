@@ -14,35 +14,40 @@
 </head>
 <body>
 
-  <nav class="flex-row justify-center">
+  <nav class="wrapper full flex-row justify-center">
     <img src="./assets/logo.svg" alt="meet">
   </nav>
 
-  <header class="[ hero ]">
-    <picture>
-      <source media="(max-width: 768px)" srcset="./assets/tablet/image-hero.png">
+  <header class="wrapper full flex-row justify-space-between [ hero ]">
+    <figure class='[ hero-mobile ]'>
+      <img src="./assets/tablet/image-hero.png" alt="">
+    </figure>
+    <figure class="h-left">
       <img class="hero-left" src="./assets/desktop/image-hero-left.png" alt="">
-    </picture>
-    <div class="flex-column items-center justify-center gap-32">
+    </figure>
+    <hgroup class="flex-column items-center justify-center gap-32 [ hero-content ]">
       <h1 class="center fluid-type">Group Chat for Everyone</h1>
       <p class="center">Meet makes it easy to connect with others face-to-face virtually and collaborate across any device.</p>
-      <span class="flex-row gap-16 items-center [ cta ]">
+      <div class="flex-row gap-16 items-center [ cta ]">
         <button class="clr-bg-cyan no-wrap [ cta-primary ]">Download <span class='clr-light-cyan'>v1.3</span></button>
         <button class="clr-bg-purple no-wrap [ cta-secondary ]">What is it?</button>
-      </span>
-    </div>
-    <img class="hero-right" src="./assets/desktop/image-hero-right.png" alt="">
+      </div>
+    </hgroup>
+    <figure class="h-right">
+      <img class="hero-right" src="./assets/desktop/image-hero-right.png" alt="">
+    </figure>
   </header>
-  
-  <main>
-    <div class="wrapper full flex-column gap-64 items-center [ main-wrapper ]">
+
+  <main class="wrapper full">
+    <div class="wrapper inner flex-column items-center [ main-content ]">
       <span class="landmark">01</span>
-      <div class="[ gallery ]">
+      <div class="gallery">
         <img src="./assets/desktop/image-woman-in-videocall.jpg" alt="">
         <img src="./assets/desktop/image-women-videochatting.jpg" alt="">
         <img src="./assets/desktop/image-men-in-meeting.jpg" alt="">
         <img src="./assets/desktop/image-man-texting.jpg" alt="">
       </div>
+  
       <div class="flex-column justify-center items-center gap-32">
         <div class="flex-column gap-16 items-center">
           <p class="uppercase ls-4 clr-cyan fw-900"><small class="fs-16">Built for modern use</small></p>
@@ -54,16 +59,15 @@
     </div>
   </main>
   
-  <div class="[ footer-container ]">
-    <footer class="flex-column items-center">
-      <span class="landmark last">02</span>
-      <section class="wrapper flex-row items-center justify-space-between gap-24 wrap full [ footer-content ]">
-        <h2 class="clr-white">Experience more together</h2>
-        <p class="clr-white">Stay connected with reliable HD meetings and unlimited one-on-one and group video sessions.</p>
-        <button class="clr-bg-purple no-wrap [ cta-secondary ]">Download <span class="clr-light-purple">v1.3</span></button>
-      </section>
-    </footer>
-  </div>
+  <footer class="wrapper full flex-column items-center">
+    <span class="landmark last">02</span>
+    <section class="wrapper inner flex-row gap-24 items-center justify-space-between wrap full [ footer-content ]">
+      <h2 class="clr-white">Experience more together</h2>
+      <p class="clr-white">Stay connected with reliable HD meetings and unlimited one-on-one and group video sessions.</p>
+      <button class="clr-bg-purple no-wrap [ cta-secondary ]">Download <span class="clr-light-purple">v1.3</span></button>
+    </section>
+  </footer>
 
+  
 </body>
 </html>
