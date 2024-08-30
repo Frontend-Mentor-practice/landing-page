@@ -95,7 +95,7 @@ nav {
 .hero {
   padding-block: 3.5rem;
   --fluid-min: 2.5rem;
-  --fluid-target: 3vw;
+  --fluid-target: 4vw;
   --fluid-max: 4rem;
   --wrapper-pad: 0px;
 }
